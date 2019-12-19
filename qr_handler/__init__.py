@@ -5,7 +5,6 @@ import openpyxl
 from tkinter import *
 from PIL import Image, ImageTk
 
-from datetime import datetime
 from time import sleep
 
 
@@ -35,6 +34,8 @@ class QrHandler:
         self.square = self.canvas.create_rectangle(320, 140, 520, 340, fill='', outline='green')
 
         self.canvas.pack(expand=YES, fill=BOTH)
+
+        self.cur_id = None
 
     def run(self):
         self.running = True
@@ -77,6 +78,10 @@ class QrHandler:
         sheet = self.wb['Лист1']
 
         search_id = int(codes[0])
+        if self.cur_id is not None and search_id == self.cur_id:
+            return
+        else:
+            self.cur_id = search_id
 
         i = 1
         while sheet['A' + str(i)].value is not None:
