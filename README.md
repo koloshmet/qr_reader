@@ -3,16 +3,19 @@
 ## How to install
 
 #### 1. Install with your package manager e.g. brew (MacOS) or apt (Linux) following packages:
-* libzbar0
-* libzbar-dev
-* opencv
-* pip3
+* libzbar0 (Linux)
+* libzbar-dev (Linux)
+* python3-tk (Linux)
+* python3-pip (Linux)
+* zbar (MacOS)
+* tcl-tk (MacOS)
+* python3 (MacOS)
 
 It has to look like:
 
-`brew install pip3` (MacOS)
+`brew install python3` (MacOS)
 
-`sudo apt install pip3` (Linux)
+`sudo apt install python3-pip` (Linux)
 
 #### 2. Install with pip3 following packages:
 * opencv-python
