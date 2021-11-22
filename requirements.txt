@@ -1,0 +1,4 @@
+openpyxl~=3.0
+Pillow~=8.4
+opencv-python~=4.5.4
+zbarlight~=3.0

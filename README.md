@@ -3,10 +3,14 @@
 ## How to install
 
 #### 1. Install with your package manager e.g. brew (MacOS) or apt (Linux) following packages:
-* libzbar0
-* libzbar-dev
-* opencv
-* pip3
+* libzbar0 (Linux)
+* libzbar-dev (Linux)
+* python3-tk (Linux)
+* python3-pip (Linux)
+* zbar (MacOS)
+* tcl-tk (MacOS)
+* python-tk (MacOS)
+* python3 (MacOS)
 
 It has to look like:
 
@@ -14,14 +18,8 @@ It has to look like:
 
 `sudo apt install pip3` (Linux)
 
-#### 2. Install with pip3 following packages:
-* opencv-python
-* openpyxl
-* zbarlight
-
-It has to look like:
-
-`pip3 install opencv-python`
+#### 2. Install python requirements:
+`python3 -m pip install -r requirements.txt`
 
 ## How to use
 1. Download archive from here
