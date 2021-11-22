@@ -7,16 +7,16 @@
 * libzbar-dev (Linux)
 * python3-tk (Linux)
 * python3-pip (Linux)
+* python3 (MacOS)
 * zbar (MacOS)
 * tcl-tk (MacOS)
 * python-tk (MacOS)
-* python3 (MacOS)
 
 It has to look like:
 
-`brew install pip3` (MacOS)
+`brew install python3` (MacOS)
 
-`sudo apt install pip3` (Linux)
+`sudo apt install python3-pip` (Linux)
 
 #### 2. Install python requirements:
 `python3 -m pip install -r requirements.txt`
