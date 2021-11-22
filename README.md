@@ -2,7 +2,25 @@
 
 ## How to install
 
-#### 1. Install with your package manager e.g. brew (MacOS) or apt (Linux) following packages:
+### Common steps
+
+#### 1. Download archive from here
+
+#### 2. Unpack it
+
+#### 3. Open terminal
+
+#### 4. Go to the folder where the files were unpacked
+Example: `cd ~/Downloads/qr_reader`
+
+### Simple way
+#### 5. Run install script for your OS
+MacOS: `./install_mac.sh`
+
+Linux: `./install_linux.sh`
+
+### Difficult way
+#### 5. Install with your package manager e.g. brew (MacOS) or apt (Linux) following packages:
 * libzbar0 (Linux)
 * libzbar-dev (Linux)
 * python3-tk (Linux)
@@ -18,14 +36,16 @@ It has to look like:
 
 `sudo apt install python3-pip` (Linux)
 
-#### 2. Install python requirements:
-`python3 -m pip install -r requirements.txt`
+#### 6. Install python libraries:
+```
+python3 -m ensurepip --upgrade
+mkdir venv && python3 -m venv venv
+./venv/bin/python3 -m pip install -r requirements.txt
+```
 
 ## How to use
-1. Download archive from here
-2. Unpack it
-3. Open terminal
-4. Go to the folder where the files were unpacked (`cd ~/Downloads/qr_reader`)
-5. Run main.py with python3 (`python3 main.py`)
+Run **run.sh**:
+
+`./run.sh`
 
 If you do everything right, it starts immediately
