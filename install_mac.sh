@@ -13,7 +13,7 @@ fi
 brew install python3 tcl-tk python-tk zbar
 
 # Install required python packages to local environment
-python3 -m ensurepip --upgrade
-mkdir venv && python3 -m venv venv
+/usr/local/bin/python3 -m ensurepip --upgrade
+mkdir venv && /usr/local/bin/python3 -m venv venv
 ./venv/bin/python3 -m pip install -r requirements.txt
 
