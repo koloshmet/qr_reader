@@ -15,9 +15,21 @@ Example: `cd ~/Downloads/qr_reader`
 
 ### Simple way
 #### 5. Run install script for your OS
-MacOS: `./install_mac.sh`
+**MacOS**: 
 
-Linux: `./install_linux.sh`
+Warning: Make sure that you have installed xcode command line tools.
+
+Run `xcode-select --install`
+
+If it returns `xcode-select: error: command line tools are already installed` everything is fine,
+else proceed to popup installing window
+
+`./install_mac.sh`
+
+**Linux**: 
+
+`./install_linux.sh`
+
 
 ### Difficult way
 #### 5. Install with your package manager e.g. brew (MacOS) or apt (Linux) following packages:
