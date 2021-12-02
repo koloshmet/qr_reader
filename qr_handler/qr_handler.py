@@ -8,7 +8,7 @@ import zbarlight
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 
-from PIL import Image, ImageTk
+from PIL import Image, ImageTk, ImageOps
 
 import time
 import os.path
@@ -91,16 +91,24 @@ class QrHandler(object):
 
         self._frame.set_photo(self._convert_image(image))
 
-        image.load()
-
-        codes = zbarlight.scan_codes(['qrcode'], image)
-        if codes is not None:
-            print(f"Detected: {codes}")
-            self._find(codes)
-            print("Scanned")
+        for img in self._scanning_images(image):
+            codes = zbarlight.scan_codes(['qrcode'], img)
+            if codes is not None:
+                print(f"Detected: {codes}")
+                self._find(codes)
+                print("Scanned")
+                break
 
     def _read_image(self) -> Image.Image:
         return self._camera.get_image()
+
+    @staticmethod
+    def _scanning_images(image: Image.Image) -> t.List[Image.Image]:
+        grey = image.convert('L')
+        neg = ImageOps.invert(grey)
+        grey.load()
+        neg.load()
+        return [grey, neg]
 
     @staticmethod
     def _convert_image(image: Image.Image) -> ImageTk.PhotoImage:
